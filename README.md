@@ -1,37 +1,42 @@
 # KiranaPool 🚚
+### Smarter Deliveries, Lower Costs
 
-**AI-Powered Shared Last-Mile Delivery Optimisation**
+KiranaPool is a smart logistics solution that helps local grocery stores coordinate deliveries by combining nearby orders and finding efficient delivery routes. The goal is to reduce delivery expenses, minimise unnecessary trips, and improve last-mile delivery efficiency.
 
-KiranaPool is a smart delivery coordination platform designed to help neighbourhood grocery shops reduce delivery costs by pooling compatible orders and optimising delivery routes.
+## ✨ Key Highlights
 
-## 🎯 Key Features
+- 📦 **Order Coordination** — Manage delivery orders from multiple local shops.
+- 🤝 **Order Pooling** — Combine compatible orders into shared delivery batches.
+- 🗺️ **Route Planning** — Identify efficient routes and delivery stop sequences.
+- 💰 **Cost Analysis** — Compare individual and pooled delivery expenses.
+- 📊 **Demand Prediction** — Estimate upcoming delivery demand using ML.
+- 🛵 **Delivery Tracking** — Visualise rider routes and delivery progress.
 
-- **Order Management** — Create and manage delivery orders.
-- **Smart Order Batching** — Group compatible orders from nearby shops.
-- **Route Optimisation** — Plan efficient rider routes and delivery stops.
-- **Cost Comparison** — Compare individual deliveries with pooled deliveries.
-- **Savings Analytics** — Estimate delivery cost savings for each shop.
-- **Demand Forecasting** — Estimate future delivery demand.
+## 💻 Technology Stack
 
-## 🛠️ Tech Stack
+| Component | Technology |
+|---|---|
+| Frontend | React.js, Vite |
+| Backend | Node.js, Express.js |
+| Database | MongoDB |
+| ML Service | Python, FastAPI |
 
-- **Frontend:** React.js + Vite
-- **Backend:** Node.js + Express.js
-- **Database:** MongoDB
-- **ML Service:** Python + FastAPI
+## 🔄 How It Works
 
-## 🏗️ Architecture
+1. Collect orders from participating local shops.
+2. Group compatible orders based on location and delivery constraints.
+3. Generate optimised delivery plans.
+4. Compare estimated costs and potential savings.
+5. Display routes and delivery information through the dashboard.
 
-React frontend → Express backend → MongoDB / Python ML service
+## 🚧 Development Status
 
-## 🚀 Project Status
-
-Currently in development as part of a 24-hour hackathon. Features will be implemented and integrated incrementally.
+KiranaPool is being developed during a 24-hour hackathon. Features and integrations are being built incrementally, with priority given to a working end-to-end prototype.
 
 ## 👥 Team
 
-Built by a team of four developers working across frontend, backend, and machine learning.
+Developed by a four-member team working on frontend, backend, and machine learning.
 
 ---
 
-*Building smarter, more efficient last-mile deliveries for local businesses.*
+**KiranaPool — Connecting local shops through smarter delivery planning.**
