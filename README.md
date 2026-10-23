@@ -1,42 +1,27 @@
-# KiranaPool 🚚
-### Smarter Deliveries, Lower Costs
+# KiranaPool Frontend
 
-KiranaPool is a smart logistics solution that helps local grocery stores coordinate deliveries by combining nearby orders and finding efficient delivery routes. The goal is to reduce delivery expenses, minimise unnecessary trips, and improve last-mile delivery efficiency.
+React + Vite frontend for the KiranaPool backend.
 
-## ✨ Key Highlights
+## Roles
+- `shopkeeper`: registers/manages their kirana shop and views its supply orders.
+- `wholesaler`: manages warehouses, records manually received shop orders, pools compatible deliveries, assigns riders, and generates demand forecasts.
+- `rider`: manages their rider profile, views assigned deliveries, and advances delivery status.
 
-- 📦 **Order Coordination** — Manage delivery orders from multiple local shops.
-- 🤝 **Order Pooling** — Combine compatible orders into shared delivery batches.
-- 🗺️ **Route Planning** — Identify efficient routes and delivery stop sequences.
-- 💰 **Cost Analysis** — Compare individual and pooled delivery expenses.
-- 📊 **Demand Prediction** — Estimate upcoming delivery demand using ML.
-- 🛵 **Delivery Tracking** — Visualise rider routes and delivery progress.
+## Run locally
+1. Copy `.env.example` to `.env`.
+2. Set `VITE_API_BASE_URL` to the backend origin plus `/api` (for example `http://localhost:5000/api`).
+3. Set `VITE_GOOGLE_CLIENT_ID` to the same Google OAuth client ID configured by the backend.
+4. Run `npm install`.
+5. Run `npm run dev`.
 
-## 💻 Technology Stack
+Live API mode is the default. To show the old synthetic UI fixtures offline, set `VITE_USE_MOCK_DATA=true`; mock mode does not perform live role/API validation.
 
-| Component | Technology |
-|---|---|
-| Frontend | React.js, Vite |
-| Backend | Node.js, Express.js |
-| Database | MongoDB |
-| ML Service | Python, FastAPI |
+## Connected backend flows
+- Auth: signup/login/Google login and session restore with bearer JWT.
+- Shops: kirana shop registration and wholesaler shop selection.
+- Warehouses: wholesaler-owned warehouse creation/listing with service areas.
+- Orders: wholesaler manual supply order with warehouse and future delivery slots; role-specific order lists and rider status updates.
+- Planning: auto-pool compatible pending orders, view plans, assign available riders, cancel plans.
+- Forecasts: generate shop-wise/area-wise time-slot forecasts, inspect results, and record actual demand.
 
-## 🔄 How It Works
-
-1. Collect orders from participating local shops.
-2. Group compatible orders based on location and delivery constraints.
-3. Generate optimised delivery plans.
-4. Compare estimated costs and potential savings.
-5. Display routes and delivery information through the dashboard.
-
-## 🚧 Development Status
-
-KiranaPool is being developed during a 24-hour hackathon. Features and integrations are being built incrementally, with priority given to a working end-to-end prototype.
-
-## 👥 Team
-
-Developed by a four-member team working on frontend, backend, and machine learning.
-
----
-
-**KiranaPool — Connecting local shops through smarter delivery planning.**
+The frontend does not include backend credentials. Use the backend `.env` separately.
