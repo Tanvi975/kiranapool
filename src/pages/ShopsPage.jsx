@@ -4,13 +4,14 @@ import { useAuth } from "../context/AuthContext";
 import { shopsApi } from "../services/api";
 
 const emptyForm = {
-  name: "",
-  ownerName: "",
-  phone: "",
-  address: "",
-  lat: "",
-  lng: "",
-};
+    name: "",
+    ownerName: "",
+    phone: "",
+    address: "",
+    area: "",
+    lat: "",
+    lng: "",
+  };
 
 const inputStyle = {
   width: "100%",
@@ -135,11 +136,12 @@ export default function ShopsPage() {
       ownerName: form.ownerName.trim(),
       phone: form.phone.trim(),
       address: form.address.trim(),
+      area: form.area.trim(),
       location: { lat, lng },
     };
 
     setSaving(true);
-
+    const wasEditing = Boolean(editingId);
     try {
       if (editingId) {
         await shopsApi.update(editingId, payload);
@@ -150,7 +152,7 @@ export default function ShopsPage() {
       }
 
       resetForm();
-      setMessage(editingId ? "Shop updated successfully." : "Shop created successfully.");
+      setMessage(wasEditing ? "Shop updated successfully." : "Shop created successfully.");
       await loadShops();
     } catch (err) {
       setError(err.message || "Could not save shop.");
@@ -181,6 +183,7 @@ export default function ShopsPage() {
         ownerName: latest.ownerName || "",
         phone: latest.phone || "",
         address: latest.address || "",
+        area: latest.area || "",
         lat: location.lat ?? "",
         lng: location.lng ?? "",
       });

@@ -10,17 +10,20 @@ const navByRole = {
     { to: '/plan', label: 'Delivery planning', icon: '⌁' },
     { to: '/riders', label: 'Riders', icon: '↗' },
     { to: '/insights', label: 'Insights & forecasts', icon: '▥' },
+    { to: '/map', label: 'Live map', icon: '⌖' },
   ],
   shopkeeper: [
     { to: '/', label: 'Overview', icon: '▦', end: true },
     { to: '/shops', label: 'My kirana shop', icon: '⌂' },
     { to: '/orders', label: 'Supply orders', icon: '▤' },
+    { to: '/map', label: 'Live map', icon: '⌖' },
   ],
   rider: [
     { to: '/', label: 'Overview', icon: '▦', end: true },
     { to: '/riders', label: 'My rider profile', icon: '↗' },
     { to: '/orders', label: 'Assigned deliveries', icon: '▤' },
     { to: '/plan', label: 'My route', icon: '⌁' },
+    { to: '/map', label: 'Live map', icon: '⌖' },
   ],
 };
 

@@ -12,7 +12,7 @@ import ShopsPage from "./pages/ShopsPage";
 import RidersPage from "./pages/RidersPage";
 import OrdersPage from "./pages/OrdersPage";
 import WarehousePage from "./pages/WarehousePage";
-
+import MapPage from "./pages/MapPage";
 function NotFound() {
   return (
     <div className="panel not-found">
@@ -85,6 +85,7 @@ export default function App() {
               <Route path="/orders" element={<OrdersPage />} />
             </Route>
             <Route path="*" element={<NotFound />} />
+            <Route path="/map" element={<MapPage />} />
           </Route>
         </Route>
       </Routes>
